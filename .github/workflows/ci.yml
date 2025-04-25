@@ -25,6 +25,11 @@ jobs:
 
       - name: Run tests
         run: pytest
-
+        
       - name: Run Semgrep security scan
         uses: returntocorp/semgrep-action@v1
+          with:
+            config: >-
+            p/default
+
+        
