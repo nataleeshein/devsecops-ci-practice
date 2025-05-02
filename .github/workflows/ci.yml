@@ -30,8 +30,9 @@ jobs:
         uses: returntocorp/semgrep-action@v1
         with:
           config: .semgrep.yml
+          
       - name: Snyk dependency scan (Python)
-        uses: snyk/actions/python@0.4.0
+        uses: snyk/actions/setup@v1
         with:
           args: test --file=requirements.txt --package-manager=pip
         env:
