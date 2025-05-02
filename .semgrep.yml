@@ -1,0 +1,10 @@
+ rules:
+  - id: hardcoded-password
+    patterns:
+      - pattern: password = "$SECRET"
+    message: "Hardcoded password found – do not hardcode secrets in code."
+    severity: ERROR
+    languages: [python]
+    metadata:
+      category: security
+      technology: python
