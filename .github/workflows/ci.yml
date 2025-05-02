@@ -34,7 +34,7 @@ jobs:
       - name: Snyk dependency scan (Python)
         uses: snyk/actions/setup@v1
         with:
-          args: test --file=requirements.txt --package-manager=pip
+          run: snyk test --file=requirements.txt --package-manager=pip
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
