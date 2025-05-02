@@ -30,6 +30,13 @@ jobs:
         uses: returntocorp/semgrep-action@v1
         with:
           config: .semgrep.yml
+          
+      - name: Snyk dependency scan
+        uses: snyk/actions/python@0.4.0
+        with:
+          args: test
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
 
         
